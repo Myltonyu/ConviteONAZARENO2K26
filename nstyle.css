@@ -1,0 +1,199 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Brandon Grotesque', sans-serif;
+}
+
+body {
+  background-image: url("wll2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomBG 20s ease-in-out infinite alternate;
+}
+
+/* CONTAINER */
+.container {
+  min-height: 100vh;
+  background: rgba(38, 9, 9, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.credit {
+  text-align: center;
+  padding: 15px 0;
+  color: white; /* texto branco */
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-family: 'Brandon Grotesque', ;
+  background: rgba(0,0,0,0.3); /* fundo semi-transparente */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 500;
+}
+
+
+/* NOMES DOS NOIVOS */
+#cartaconvite {
+  font-family: 'Brandon Grotesque', cursive;
+  font-size: clamp(2rem, 8vw, 5rem);
+  color: white;
+}
+
+
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+/* BOTÃO PDF */
+#btnPDF {
+  background-color: #ffffff69;
+  backdrop-filter: blur(2px);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: clamp(25px, 6vw, 50px) clamp(50px, 8vw, 120px);
+  font-family: 'Ragick', cursive;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  cursor: pointer;
+  transition: 0.3s ease;
+  max-width: 90%;
+}
+
+#btnPDF:hover {
+  background-color: #EC815D;
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/*   COUNTDOWN PREMIUM       */
+/* ========================= */
+
+#countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  font-family: ragick;
+
+}
+
+/* BLOCO INDIVIDUAL */
+.count-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.count-title {
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: 500;
+}
+
+
+.count-wrapper {
+  display: flex;
+  gap: clamp(10px, 3vw, 20px);
+  white-space: nowrap;
+}
+
+/* NÚMERO GRANDE */
+.count-box span {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(145deg, #EC815D, #EC815D);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* TEXTO PEQUENO */
+.count-box small {
+  margin-top: 6px;
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* BOTÃO MÚSICA */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.music-btn:hover {
+  background: #EC815D;
+  transform: scale(1.1);
+}
+
+/* ZOOM DE FUNDO */
+@keyframes zoomBG {
+  from { background-size: 100%; }
+  to { background-size: 115%; }
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 768px) {
+
+  .container {
+    gap: 20px;
+  }
+
+  #cartaconvite {
+    font-size: clamp(1.5rem, 9vw, 2.5rem);
+  }
+
+  #btnPDF {
+    padding: 20px 40px;
+    font-size: clamp(1.3rem, 6vw, 2.2rem);
+  }
+
+  #countdown {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .music-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
