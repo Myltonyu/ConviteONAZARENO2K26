@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "Brandon Grotesque";
-  src: url("./fonts/BrandonGrotesque-Regular.woff2") format("woff2");
+  src: url("./fonts/Brandon Grotesque Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Ragick";
-  src: url("./fonts/Ragick-Regular.woff2") format("woff2");
+  src: url("./fonts/ragick.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
