@@ -73,7 +73,7 @@ body {
 
 /* NOMES DOS NOIVOS */
 #cartaconvite {
-  font-family: "Brandon Grotesque", sans-serif;
+  font-family: "Brandon Grotesque Regular", sans-serif;
   font-size: clamp(2rem, 8vw, 5rem);
   color: white;
 }
